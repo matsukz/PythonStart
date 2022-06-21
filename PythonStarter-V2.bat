@@ -2,35 +2,35 @@
 title PythonStarter
 color f0
 
-echo Œ»Ý‚ÌêŠ‚Í %~dp0 ‚Å‚·
+echo ç¾åœ¨ã®å ´æ‰€ã¯ %~dp0 ã§ã™
 echo.
 
 :main
-echo ƒtƒ@ƒCƒ‹–¼ or ƒhƒ‰ƒbƒOƒAƒ“ƒhƒhƒƒbƒv‚ÅŽæ‚èž‚Ý
+echo ãƒ•ã‚¡ã‚¤ãƒ«å or ãƒ‰ãƒ©ãƒƒã‚°ã‚¢ãƒ³ãƒ‰ãƒ‰ãƒ­ãƒƒãƒ—ã§å–ã‚Šè¾¼ã¿
 echo.
 set PASS=
-set /P PASS="ŽÀs‚·‚éPythonFile–¼¨"
+set /P PASS="å®Ÿè¡Œã™ã‚‹PythonFileåâ†’"
 
 if "%PASS%" == "" goto :TRUE else goto :FALSE
 
-:TRUE
-echo •¶Žš‚ª‚ ‚è‚Ü‚¹‚ñ
+:FALSE
+echo æ–‡å­—ãŒã‚ã‚Šã¾ã›ã‚“
 echo.
 goto :main
 
-:FALSE
+:TRUE
 echo.
-echo %PASS%‚ðƒ[ƒh’†
+echo %PASS%ã‚’ãƒ­ãƒ¼ãƒ‰ä¸­
 python %PASS%
 goto :sentaku
 
 :sentaku
-echo Ä“xPythonƒtƒ@ƒCƒ‹‚ð“Ç‚Ýž‚Ý‚Ü‚·‚©H
+echo å†åº¦Pythonãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã‹ï¼Ÿ
 choice
 if errorlevel 2 goto :end
 if errorlevel 1 goto :main
 
 :end
-echo I—¹‚µ‚Ü‚·c
+echo çµ‚äº†ã—ã¾ã™â€¦
 
 pause
